@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+/* Importa a fonte 'Yellowtail' do Google Fonts para ser usada no documento */
+
+:root{
+    --azul: #4B0082;
+    --amarelo: #FFDEAD;
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza: #c1c1c1;
+    --cinzaclaro: #DCDCDC;
+    --azulclaro: #B0C4DE;
+    /* Define variáveis de cores para facilitar a reutilização no código */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Remove as margens e o padding padrão de todos os elementos e define box-sizing como border-box para incluir padding e bordas nas dimensões do elemento */
+}
+
+body{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    /* Define a fonte padrão do corpo da página como Tahoma, com Geneva e Verdana como alternativas. */
+}
+
+header{
+    height: 80px;
+    /* Define a altura do cabeçalho como 80px */
+    background-color: var(--branco);
+    /* Define a cor de fundo do cabeçalho como branco (usando a variável) */
+    color: var(--preto);
+    /* Define a cor do texto no cabeçalho como preto (usando a variável) */
+    display: flex;
+    /* Utiliza o layout flexível para organizar os itens dentro do cabeçalho */
+    flex-direction: row;
+    /* Define a direção do layout flexível como uma linha horizontal */
+    align-items: center;
+    /* Alinha verticalmente os itens do cabeçalho ao centro */
+    justify-content: space-around;
+    /* Distribui o espaço igualmente ao redor dos itens dentro do cabeçalho */
+    border-bottom: 3px solid var(--preto);
+    /* Adiciona uma borda inferior preta de 3px ao cabeçalho */
+}
+
+#titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* Organiza os itens dentro da seção do título em uma linha, centraliza verticalmente e horizontalmente com espaçamento de 10px entre eles */
+}
+
+#titulo i{
+    font-size: 50px;
+    /* Define o tamanho da fonte (ícone) dentro da seção do título como 50px */
+}
+
+#titulo p{
+    font-size: 30px;
+    /* Define o tamanho da fonte do parágrafo (título) como 30px */
+}
+
+#navegacao nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Organiza os itens de navegação em linha, centralizando-os verticalmente com um espaçamento de 10px entre eles */
+}
+
+#navegacao nav a{
+    color: var(--preto);
+    /* Define a cor do texto dos links de navegação como preto (usando a variável) */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    font-size: 12px;
+    /* Define o tamanho da fonte dos links como 12px */
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    /* Define bordas superiores e inferiores de 3px invisíveis (transparentes) para os links, que serão usadas no hover */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* Adiciona preenchimento (padding) acima e abaixo dos links de 5px */
+    transition: all 1s ease;
+    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam (usada no hover) */
+}
+
+#navegacao nav a:hover{
+    border-top: 3px solid var(--preto);
+    border-bottom: 3px solid var(--preto);
+    /* Altera as bordas superior e inferior para 3px sólidas e pretas quando o mouse passar sobre os links (hover) */
+    transform: translateY(-10px);
+}
+
+#login button{
+    width: 100px;
+    height: 30px;
+    /* Define a largura do botão de login como 100px e a altura como 30px */
+    background-color: var(--branco);
+    /* Define a cor de fundo do botão como branco (usando a variável) */
+    border-radius: 5px;
+    /* Define bordas arredondadas de 5px para o botão */
+    transition: all 1s ease;
+    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam no botão (usada no hover) */
+    cursor: pointer;
+    /* Altera o cursor para o formato de ponteiro (mãozinha) ao passar o mouse sobre o botão */
+    font-weight: 700;
+    /* Define o peso da fonte do botão como negrito (700) */
+}
+
+#login button:hover{
+    background-color: var(--preto);
+    /* Altera a cor de fundo do botão para preto ao passar o mouse (hover) */
+    color: var(--branco);
+    /* Altera a cor do texto do botão para branco ao passar o mouse (hover) */
+}
+
+#apresentacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Organiza os itens dentro da seção de apresentação em uma coluna e centraliza os itens */
+    border-bottom: 3px solid var(--preto);
+    /* Adiciona uma borda inferior de 3px preta à seção de apresentação */
+    padding-top: 30px;    
+    padding-bottom: 30px;
+    /* Adiciona um preenchimento inferior (padding) de 30px */
+    opacity: 0.8;
+}
+
+#apresentacao:hover{
+    background-color: var(--cinzaclaro);
+    opacity:1;
+}
+
+#apresentacao h1{
+    font-family: "Yellowtail", cursive;
+    /* Define a fonte do título principal como Yellowtail, com estilo cursivo */
+    font-weight: 400;
+    /* Define o peso da fonte como 400 (normal) */
+    font-style: normal;
+    /* Define o estilo da fonte como normal (não itálico) */
+    font-size: 80px;
+    /* Define o tamanho da fonte do título principal como 80px */
+    text-shadow: 5px 5px 5px var(--cinza);
+    /* Aplica uma sombra de texto de 5px em todas as direções com cor cinza (usando a variável) */
+    margin-bottom: 40px;
+    /* Adiciona uma margem inferior de 40px ao título */
+}
+
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    /* Organiza os itens dentro da seção de conteúdo em uma linha horizontal */
+    margin-left: 100px;
+    margin-right: 100px;
+    /* Adiciona margens de 100px à esquerda e à direita da seção de conteúdo */
+}
+
+#imagem img{
+    width: 300px;
+    /* Define a largura da imagem como 300px */
+    transition: all 1s ease;
+    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam na imagem (usada no hover) */
+}
+
+#imagem img:hover{
+    scale: 1.3;
+    /* Aumenta a escala da imagem em 10% ao passar o mouse (hover) */
+    transform: translateY(-20px);
+    transform: translateX(-20px);
+    filter: saturate(2); /* Aumenta a saturação em 100% (2x) */
+}
+
+#texto p{
+    font-size: 26px;
+    /* Define o tamanho da fonte dos parágrafos dentro da seção de texto como 26px */
+    margin-bottom: 20px;
+    /* Adiciona uma margem inferior de 20px aos parágrafos */
+    transition: all 1s ease;
+}
+
+#texto p:hover{
+    transform: translateY(-10px);
+    font-weight: 700;
+    margin-left: 20x;
+    margin-right: 20px;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--branco);
+    padding:20px 30px 20px 30px;
+}
+
+.cards:hover{
+    background-color: var(--cinzaclaro);
+}
+
+.cards h2{
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-shadow: 5px 5px 5px var(--cinza);
+}
+
+.grupo-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.card{
+    border: 3px solid var(--preto);
+    box-shadow: 5px 5px 5px var(--cinza);
+    width: 15%;
+    height: 500px;
+    opacity: 0.3;
+    background-color: var(--branco);
+    transition: all 1s ease;
+}
+
+.card:hover{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+}
+
+.card img:hover{
+    filter: saturate(2);
+}
+
+.card-info{
+    margin: 20px 10px 10px 10px;
+}
+
+.card h3{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card p{
+    height: 100px;
+    font-size:14px;
+}
+
+.card-button{
+    display:flex;
+    justify-content: center;;
+}
+
+.card-button button{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--branco);
+    border:2px solid var(--preto);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.card-button button:hover{
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+
+
+
+
+
+
+footer{
+    height: 400px;
+    border-top: 3px solid var(--preto);
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
