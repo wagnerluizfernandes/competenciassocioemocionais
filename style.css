@@ -1,294 +1,534 @@
+/* Importa a fonte Yellowtail do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
-/* Importa a fonte 'Yellowtail' do Google Fonts para ser usada no documento */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --azul: #4B0082;
-    --amarelo: #FFDEAD;
-    --preto: #000000;
-    --branco: #ffffff;
-    --cinza: #c1c1c1;
-    --cinzaclaro: #DCDCDC;
-    --azulclaro: #B0C4DE;
-    /* Define variáveis de cores para facilitar a reutilização no código */
+
+/* Define variáveis CSS para cores que podem ser reutilizadas */
+:root {
+    --azul: #4B0082; /* Azul escuro */
+    --amarelo: #FFDEAD; /* Amarelo claro */
+    --preto: #000000; /* Preto */
+    --branco: #ffffff; /* Branco */
+    --cinza: #c1c1c1; /* Cinza médio */
+    --cinzaclaro: #DCDCDC; /* Cinza claro */
+    --azulclaro: #B0C4DE; /* Azul claro */
+    --verdemedio: #3CB371;
+    --verdeescuro: #006400;
+
+
+    --autogestao:#003366;
+    --autogestao1:#0040ff;
+    --fonteautogestao: #ffffff;
+
+    --colaboracao:#28a745;
+    --colaboracao1: #008000;
+    --fontecolaboracao: #ffffff;
+   
+    --resiliencia:#D2691E;
+    --resiliencia1: #A0522D;
+    --fonteresiliencia: #ffffff;
+
+
+    --empatia:#9370DB;
+    --empatia1: #8B008B;
+    --fonteempatia: #ffffff;
+
+    --comunicacao: #1E90FF;
+    --comunicacao1: #0000ff;
+    --fontecomunicacao: #ffffff;
+
+    --adaptabilidade: #FF4500;
+    --adaptabilidade1:  	#F4A460;
+    --fonteadaptabilidade: #ffffff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Remove as margens e o padding padrão de todos os elementos e define box-sizing como border-box para incluir padding e bordas nas dimensões do elemento */
+/* Remove margens e preenchimentos padrão, define box-sizing como border-box para todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento no tamanho total do elemento */
 }
 
-body{
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
-    /* Define a fonte padrão do corpo da página como Tahoma, com Geneva e Verdana como alternativas. */
+/* Define a fonte padrão da página */
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do corpo da página */
 }
 
-header{
-    height: 80px;
-    /* Define a altura do cabeçalho como 80px */
-    background-color: var(--branco);
-    /* Define a cor de fundo do cabeçalho como branco (usando a variável) */
-    color: var(--preto);
-    /* Define a cor do texto no cabeçalho como preto (usando a variável) */
-    display: flex;
-    /* Utiliza o layout flexível para organizar os itens dentro do cabeçalho */
-    flex-direction: row;
-    /* Define a direção do layout flexível como uma linha horizontal */
-    align-items: center;
-    /* Alinha verticalmente os itens do cabeçalho ao centro */
-    justify-content: space-around;
-    /* Distribui o espaço igualmente ao redor dos itens dentro do cabeçalho */
-    border-bottom: 3px solid var(--preto);
-    /* Adiciona uma borda inferior preta de 3px ao cabeçalho */
+/* Estiliza o cabeçalho da página */
+header {
+    height: 80px; /* Altura do cabeçalho */
+    background-color: var(--branco); /* Cor de fundo branca */
+    color: var(--preto); /* Cor do texto preta */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: space-around; /* Distribui itens igualmente com espaçamento */
+    border-bottom: 3px solid var(--preto); /* Borda inferior preta */
 }
 
-#titulo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    /* Organiza os itens dentro da seção do título em uma linha, centraliza verticalmente e horizontalmente com espaçamento de 10px entre eles */
+/* Estiliza a área do título dentro do cabeçalho */
+#titulo {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre ícones e texto */
 }
 
-#titulo i{
-    font-size: 50px;
-    /* Define o tamanho da fonte (ícone) dentro da seção do título como 50px */
+/* Estiliza os ícones dentro da área do título */
+#titulo i {
+    font-size: 50px; /* Tamanho da fonte dos ícones */
 }
 
-#titulo p{
-    font-size: 30px;
-    /* Define o tamanho da fonte do parágrafo (título) como 30px */
+/* Estiliza os parágrafos dentro da área do título */
+#titulo p {
+    font-size: 30px; /* Tamanho da fonte dos parágrafos */
 }
 
-#navegacao nav{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* Organiza os itens de navegação em linha, centralizando-os verticalmente com um espaçamento de 10px entre eles */
+/* Estiliza a área de navegação */
+#navegacao nav {
+    display: flex; /* Usa Flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    gap: 10px; /* Espaçamento entre os links de navegação */
 }
 
-#navegacao nav a{
-    color: var(--preto);
-    /* Define a cor do texto dos links de navegação como preto (usando a variável) */
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
-    font-size: 12px;
-    /* Define o tamanho da fonte dos links como 12px */
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    /* Define bordas superiores e inferiores de 3px invisíveis (transparentes) para os links, que serão usadas no hover */
-    padding-top: 5px;
-    padding-bottom: 5px;
-    /* Adiciona preenchimento (padding) acima e abaixo dos links de 5px */
-    transition: all 1s ease;
-    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam (usada no hover) */
+/* Estiliza os links de navegação */
+#navegacao nav a {
+    color: var(--preto); /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 12px; /* Tamanho da fonte dos links */
+    border-top: 3px solid transparent; /* Borda superior transparente */
+    border-bottom: 3px solid transparent; /* Borda inferior transparente */
+    padding-top: 5px; /* Espaçamento interno superior */
+    padding-bottom: 5px; /* Espaçamento interno inferior */
+    transition: all 1s ease; /* Transição suave de 1 segundo */
 }
 
-#navegacao nav a:hover{
-    border-top: 3px solid var(--preto);
-    border-bottom: 3px solid var(--preto);
-    /* Altera as bordas superior e inferior para 3px sólidas e pretas quando o mouse passar sobre os links (hover) */
-    transform: translateY(-10px);
+/* Estiliza o estado de hover dos links de navegação */
+#navegacao nav a:hover {
+    border-top: 3px solid var(--preto); /* Borda superior preta no hover */
+    border-bottom: 3px solid var(--preto); /* Borda inferior preta no hover */
+    transform: translateY(-10px); /* Move o link para cima em 10px */
 }
 
-#login button{
-    width: 100px;
-    height: 30px;
-    /* Define a largura do botão de login como 100px e a altura como 30px */
-    background-color: var(--branco);
-    /* Define a cor de fundo do botão como branco (usando a variável) */
-    border-radius: 5px;
-    /* Define bordas arredondadas de 5px para o botão */
-    transition: all 1s ease;
-    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam no botão (usada no hover) */
-    cursor: pointer;
-    /* Altera o cursor para o formato de ponteiro (mãozinha) ao passar o mouse sobre o botão */
-    font-weight: 700;
-    /* Define o peso da fonte do botão como negrito (700) */
+/* Estiliza o botão de login */
+#login button {
+    width: 100px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    background-color: var(--branco); /* Cor de fundo branca */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 1s ease; /* Transição suave de 1 segundo */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    font-weight: 700; /* Peso da fonte em negrito */
 }
 
-#login button:hover{
-    background-color: var(--preto);
-    /* Altera a cor de fundo do botão para preto ao passar o mouse (hover) */
+/* Estiliza o estado de hover do botão de login */
+#login button:hover {
+    background-color: var(--preto); /* Cor de fundo preta no hover */
+    color: var(--branco); /* Cor do texto branca no hover */
+}
+
+/* Estiliza a área de apresentação */
+#apresentacao {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha itens na vertical */
+    align-items: center; /* Alinha itens horizontalmente ao centro */
+    border-bottom: 3px solid var(--preto); /* Borda inferior preta */
+    padding-top: 30px; /* Espaçamento interno superior */
+    opacity: 0.8; /* Opacidade reduzida */
+}
+
+/* Estiliza o estado de hover da área de apresentação */
+#apresentacao:hover {
+    background-color: var(--cinzaclaro); /* Fundo cinza claro no hover */
+    opacity: 1; /* Opacidade total no hover */
+}
+
+/* Estiliza o título dentro da área de apresentação */
+#apresentacao h1 {
+    font-family: "Yellowtail", cursive; /* Fonte cursiva Yellowtail */
+    font-weight: 400; /* Peso da fonte normal */
+    font-style: normal; /* Estilo da fonte normal */
+    font-size: 80px; /* Tamanho da fonte do título */
+    text-shadow: 2px 2px 2px var(--cinza); /* Sombra do texto cinza */
+    margin-bottom: 40px; /* Margem inferior do título */
+}
+
+/* Estiliza o conteúdo principal */
+#conteudo {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    margin-left: 100px; /* Margem esquerda */
+    margin-right: 100px; /* Margem direita */
+}
+
+/* Estiliza as imagens dentro da área de imagem */
+#imagem img {
+    height: 100%;
+    transition: all 1s ease; /* Transição suave de 1 segundo */
+}
+
+/* Estiliza o estado de hover das imagens */
+#imagem img:hover {
+    filter: saturate(1.3); /* Aumenta a saturação da imagem */
+}
+
+/* Estiliza os parágrafos dentro da área de texto */
+#texto p {
+    font-size: 26px; /* Tamanho da fonte dos parágrafos */
+    margin-bottom: 20px; /* Margem inferior dos parágrafos */
+    transition: all 1s ease; /* Transição suave de 1 segundo */
+}
+
+/* Estiliza o estado de hover dos parágrafos */
+#texto p:hover {
+    transform: translateY(-10px); /* Move o parágrafo para cima em 10px */
+    font-weight: 700; /* Peso da fonte em negrito */
+    margin-left: 20px; /* Margem esquerda aumentada */
+    margin-right: 20px; /* Margem direita aumentada */
+}
+
+/* Estiliza a área dos cards */
+.cards {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha itens na vertical */
+    align-items: center; /* Alinha itens horizontalmente ao centro */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    background-color: var(--verdemedio); /* Cor de fundo branca */
+    padding: 70px 30px; /* Espaçamento interno */
+}
+
+/* Estiliza o estado de hover da área dos cards */
+.cards:hover {
+    background-color: var(--verdeescuro); /* Fundo cinza claro no hover */
+}
+
+/* Estiliza os títulos dentro da área dos cards */
+.cards h2 {
     color: var(--branco);
-    /* Altera a cor do texto do botão para branco ao passar o mouse (hover) */
+    font-size: 50px; /* Tamanho da fonte dos títulos */
+    margin-bottom: 40px; /* Margem inferior dos títulos */
+    text-shadow: 2px 2px 2px var(--cinza); /* Sombra do texto cinza */
+
 }
 
-#apresentacao{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Organiza os itens dentro da seção de apresentação em uma coluna e centraliza os itens */
-    border-bottom: 3px solid var(--preto);
-    /* Adiciona uma borda inferior de 3px preta à seção de apresentação */
-    padding-top: 30px;    
-    padding-bottom: 30px;
-    /* Adiciona um preenchimento inferior (padding) de 30px */
-    opacity: 0.8;
+/* Estiliza a área que contém os cards */
+.grupo-cards {
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: row; /* Alinha itens na horizontal */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: space-around; /* Distribui itens igualmente com espaçamento */
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
-#apresentacao:hover{
-    background-color: var(--cinzaclaro);
-    opacity:1;
+/* Estiliza cada card individualmente */
+.card {
+    border: 1px solid var(--cinza); /* Borda preta */
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px var(--cinza); /* Sombra do card cinza */
+    width: 15%; /* Largura do card */
+    height: 500px; /* Altura do card */
+    opacity: 0.5; /* Opacidade reduzida */
+    background-color: var(--branco); /* Cor de fundo branca */
+    transition: all 1s ease; /* Transição suave de 1 segundo */
 }
 
-#apresentacao h1{
-    font-family: "Yellowtail", cursive;
-    /* Define a fonte do título principal como Yellowtail, com estilo cursivo */
-    font-weight: 400;
-    /* Define o peso da fonte como 400 (normal) */
-    font-style: normal;
-    /* Define o estilo da fonte como normal (não itálico) */
-    font-size: 80px;
-    /* Define o tamanho da fonte do título principal como 80px */
-    text-shadow: 5px 5px 5px var(--cinza);
-    /* Aplica uma sombra de texto de 5px em todas as direções com cor cinza (usando a variável) */
-    margin-bottom: 40px;
-    /* Adiciona uma margem inferior de 40px ao título */
+/* Estiliza o estado de hover dos cards */
+.card:hover {
+    opacity: 1; /* Opacidade total no hover */
+    transform: translateY(-20px); /* Move o card para cima em 20px */
 }
 
-#conteudo{
-    display: flex;
-    flex-direction: row;
-    /* Organiza os itens dentro da seção de conteúdo em uma linha horizontal */
-    margin-left: 100px;
-    margin-right: 100px;
-    /* Adiciona margens de 100px à esquerda e à direita da seção de conteúdo */
+/* Estiliza as imagens dentro dos cards */
+.card img {
+    width: 100%; /* Largura da imagem igual à largura do card */
+    height: 250px; /* Altura da imagem */
 }
 
-#imagem img{
-    width: 300px;
-    /* Define a largura da imagem como 300px */
-    transition: all 1s ease;
-    /* Aplica uma transição suave de 1 segundo para todas as propriedades que mudam na imagem (usada no hover) */
+/* Estiliza o estado de hover das imagens dentro dos cards */
+.card img:hover {
+    filter: saturate(1.3); /* Aumenta a saturação da imagem */
 }
 
-#imagem img:hover{
-    scale: 1.3;
-    /* Aumenta a escala da imagem em 10% ao passar o mouse (hover) */
-    transform: translateY(-20px);
-    transform: translateX(-20px);
-    filter: saturate(2); /* Aumenta a saturação em 100% (2x) */
+/* Estiliza a área de informações dos cards */
+.card-info {
+    margin: 20px 10px; /* Margem interna */
 }
 
-#texto p{
-    font-size: 26px;
-    /* Define o tamanho da fonte dos parágrafos dentro da seção de texto como 26px */
-    margin-bottom: 20px;
-    /* Adiciona uma margem inferior de 20px aos parágrafos */
-    transition: all 1s ease;
+/* Estiliza os títulos dentro dos cards */
+.card h3 {
+    font-size: 30px; /* Tamanho da fonte dos títulos */
+    font-weight: 700; /* Peso da fonte em negrito */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 20px; /* Margem inferior dos títulos */
 }
 
-#texto p:hover{
-    transform: translateY(-10px);
-    font-weight: 700;
-    margin-left: 20x;
-    margin-right: 20px;
+/* Estiliza os parágrafos dentro dos cards */
+.card p {
+    height: 100px; /* Altura dos parágrafos */
+    font-size: 14px; /* Tamanho da fonte dos parágrafos */
 }
 
-
-.cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--branco);
-    padding:20px 30px 20px 30px;
+/* Estiliza a área do botão dentro dos cards */
+.card-button {
+    display: flex; /* Usa Flexbox para layout */
+    justify-content: center; /* Centraliza o botão horizontalmente */
 }
 
-.cards:hover{
-    background-color: var(--cinzaclaro);
+/* Estiliza o botão dentro dos cards */
+.card-button button {
+    width: 150px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    font-weight: 700; /* Peso da fonte em negrito */
+    background-color: var(--branco); /* Cor de fundo branca */
+    border: 2px solid var(--preto); /* Borda preta */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: all 1s ease; /* Transição suave de 1 segundo */
 }
 
-.cards h2{
-    font-size: 50px;
-    margin-bottom: 40px;
-    text-shadow: 5px 5px 5px var(--cinza);
+/* Estiliza o estado de hover do botão dentro dos cards */
+.card-button button:hover {
+    background-color: var(--preto); /* Cor de fundo preta no hover */
+    color: var(--branco); /* Cor do texto branca no hover */
 }
 
-.grupo-cards{
+.competenciasocioemocional{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-
+    padding-left: 100px;
+    padding-right: 400px;     
+    border-top: 4px solid var(--preto);
 }
 
-.card{
-    border: 3px solid var(--preto);
-    box-shadow: 5px 5px 5px var(--cinza);
-    width: 15%;
-    height: 500px;
-    opacity: 0.3;
-    background-color: var(--branco);
-    transition: all 1s ease;
-}
-
-.card:hover{
-    opacity: 1;
-    transform: translateY(-20px);
-}
-
-.card img{
-    width: 100%;
-    height: 250px;
-}
-
-.card img:hover{
-    filter: saturate(2);
-}
-
-.card-info{
-    margin: 20px 10px 10px 10px;
-}
-
-.card h3{
-    font-size: 30px;
-    font-weight: 700;
+.competencia-imagem{
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.card p{
-    height: 100px;
-    font-size:14px;
-}
-
-.card-button{
     display:flex;
-    justify-content: center;;
+    align-items: center;
 }
 
-.card-button button{
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
+.competencia-imagem img{
+    height: 100%;
+}
+
+.competencia-imagem img:hover{
+    filter: saturate(1.3); /* Aumenta a saturação da imagem */    
+}
+
+.competencia-texto{
+    padding-left: 100px;
+    padding-right: 100px;;
+}
+
+.competencia-texto h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px var(--preto);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 700;
-    background-color: var(--branco);
-    border:2px solid var(--preto);
-    border-radius: 5px;
+    font-style: normal;    
+    font-size: 60px;
+}
+
+.competencia-texto h3{
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 2px var(--preto);
+}
+
+.competencia-texto p{
+    font-size: 18px;
+    word-spacing: 5px;
+    line-height: 1.5;
+    margin-left:50px;
+    height: 150px
+}
+
+.competencia-texto ol{
+    margin-left: 70px;
+    height: 200px
+
+}
+
+.competencia-texto ol li{
+    font-size:20px;
+    padding-bottom: 10px;
+}
+
+.competencia-texto ol li spam{
+    font-weight: 700;
+    text-shadow: 2px 2px 2px var(--preto);
+}
+
+.competencia-texto button{
+    margin: 40px 0 50px 100px;
+    width: 100%;
+    height: 50px;
+    font-size: 26px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 1s ease;
 }
 
-.card-button button:hover{
-    background-color: var(--preto);
-    color: var(--branco);
+
+#autogestao {
+    background: linear-gradient(to right, var(--autogestao), var(--autogestao1));
+    color: var(--fonteautogestao);
+    transform: all 2s ease;
+}
+
+#autogestao-botao-teste{
+    background-color: var(--autogestao);
+    color: var(--fonteautogestao);
+    border: 2px solid var(--fonteautogestao);
+    transition: all 1s ease;
+}
+
+#autogestao-botao-teste:hover{
+    background-color: var(--fonteautogestao);
+    color: var(--autogestao);
+
+}
+
+
+#colaboracao {
+    background: linear-gradient(to right, var(--colaboracao), var(--colaboracao1));
+    color: var(--fontecolaboracao);
+    transform: all 2s ease;
+}
+
+#colaboracao-botao-teste{
+    background-color: var(--colaboracao);
+    color: var(--fontecolaboracao);
+    border: 2px solid var(--fontecolaboracao);
+    transition: all 1s ease;
+}
+
+#colaboracao-botao-teste:hover{
+    background-color: var(--fontecolaboracao);
+    color: var(--colaboracao);
+}
+
+
+#resiliencia {
+    background: linear-gradient(to right, var(--resiliencia), var(--resiliencia1));
+    color: var(--fontecolaboracao);
+    transform: all 2s ease;
+}
+
+#resiliencia-botao-teste{
+    background-color: var(--resiliencia);
+    color: var(--fonteresiliencia);
+    border: 2px solid var(--fonteresiliencia);
+    transition: all 1s ease;
+}
+
+#resiliencia-botao-teste:hover{
+    background-color: var(--fonteresiliencia);
+    color: var(--resiliencia);
+}
+
+#empatia {
+    background: linear-gradient(to right, var(--empatia), var(--empatia1));
+    color: var(--fonteempatia);
+    transform: all 2s ease;
+}
+
+#empatia-botao-teste{
+    background-color: var(--empatia);
+    color: var(--fonteempatia);
+    border: 2px solid var(--fonteempatia);
+    transition: all 1s ease;
+}
+
+#empatia-botao-teste:hover{
+    background-color: var(--fonteempatia);
+    color: var(--empatia);
+}
+
+#comunicacao {
+    background: linear-gradient(to right, var(--comunicacao), var(--comunicacao1));
+    color: var(--fontecomunicacao);
+    transform: all 2s ease;
+}
+
+#comunicacao-botao-teste{
+    background-color: var(--comunicacao);
+    color: var(--fontecomunicacao);
+    border: 2px solid var(--fontecomunicacao);
+    transition: all 1s ease;
+}
+
+#comunicacao-botao-teste:hover{
+    background-color: var(--fontecomunicacao);
+    color: var(--comunicacao);
+}
+
+#adaptabilidade {
+    background: linear-gradient(to right, var(--adaptabilidade), var(--adaptabilidade1));
+    color: var(--fonteadaptabilidade);
+    transform: all 2s ease;
+}
+
+#adaptabilidade-botao-teste{
+    background-color: var(--adaptabilidade);
+    color: var(--fonteadaptabilidade);
+    border: 2px solid var(--fonteadaptabilidade);
+    transition: all 1s ease;
+}
+
+#adaptabilidade-botao-teste:hover{
+    background-color: var(--fonteadaptabilidade);
+    color: var(--adaptabilidade);
 }
 
 
 
 
 
-
-
-footer{
-    height: 400px;
-    border-top: 3px solid var(--preto);
-    background-color: var(--preto);
-    color: var(--branco);
+/* Estiliza o rodapé da página */
+footer {
+    height: 400px; /* Altura do rodapé */
+    border-top: 3px solid var(--preto); /* Borda superior preta */
+    background-color: var(--preto); /* Cor de fundo preta */
+    color: var(--branco); /* Cor do texto branca */
 }
+
+
+#topo {
+    position: fixed;
+    top: 50%;    /* Ajuste a distância do topo da tela conforme necessário */
+    right: 10px;  /* Ajuste a distância da lateral direita da tela conforme necessário */
+    z-index: 1000; /* Ajusta a sobreposição para garantir que o ícone esteja visível sobre outros elementos */
+    background-color: var(--branco);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--preto);
+    transition: all 0.5s ease;
+}
+
+#topo:hover{
+    transform: translateY(-10px);
+}
+
+#topo a{
+    color: var(--preto);
+}
+
+#topo i{
+    font-size: 20px;
+}
+
+
+
+
+
 

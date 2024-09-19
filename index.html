@@ -1,125 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<!-- Define o documento como HTML5 e especifica que o idioma da página é o português do Brasil -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- Define o conjunto de caracteres como UTF-8 para suportar a maioria dos caracteres especiais e símbolos -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configura o viewport para garantir que a página seja exibida corretamente em dispositivos móveis, ajustando a largura à tela do dispositivo -->
-
     <title>Competências Socioemocionais</title>
-    <!-- Define o título da aba do navegador -->
 
-    <!-- fontawesome -->
+    <!-- Inclui a biblioteca de ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link para a biblioteca FontAwesome, usada para inserir ícones na página -->
 
-    <!-- Imagem na Aba do Navegador -->
+    <!-- Define o ícone da aba do navegador -->
     <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
-    <!-- Define o ícone que será exibido na aba do navegador ao lado do título da página (favicon) -->
 
-    <!-- link para a folha de estilos - css -->
+    <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link para a folha de estilo externa (style.css) onde os estilos da página serão definidos -->
-
 </head>
 
 <body>
-    <!-- Inicia o corpo do documento, onde o conteúdo da página será inserido -->
-
+    <!-- Cabeçalho da página com o título e navegação -->
     <header>
-        <!-- Seção do cabeçalho da página, contendo o título e a navegação -->
-
         <section id="titulo">
-            <!-- Seção identificada como "titulo", contendo o ícone e o título do site -->
             <i class="fa-regular fa-face-laugh-squint"></i>
-            <!-- Insere um ícone FontAwesome de um rosto rindo -->
             <p>Competências Socioemocionais</p>
-            <!-- Texto do título principal da página -->
         </section>
 
+        <!-- Navegação com links para diferentes competências -->
         <section id="navegacao">
-            <!-- Seção de navegação, contendo os links principais -->
             <nav>
-                <!-- Elemento de navegação para organizar os links -->
-                <a href="">AUTOGESTÃO</a>
-                <!-- Link para a seção de Autogestão -->
-                <a href="">COLABORAÇÃO</a>
-                <!-- Link para a seção de Colaboração -->
-                <a href="">RESILIÊNCIA</a>
-                <!-- Link para a seção de Resiliência -->
-                <a href="">EMPATIA</a>
-                <!-- Link para a seção de Empatia -->
-                <a href="">COMUNICAÇÃO</a>
-                <!-- Link para a seção de Comunicação -->
-                <a href="">ADAPTABILIDADE</a>
-                <!-- Link para a seção de Adaptabilidade -->
+                <a href="#autogestao">AUTOGESTÃO</a>
+                <a href="#colaboracao">COLABORAÇÃO</a>
+                <a href="#resiliencia">RESILIÊNCIA</a>
+                <a href="#empatia">EMPATIA</a>
+                <a href="#comunicacao">COMUNICAÇÃO</a>
+                <a href="#adaptabilidade">ADAPTABILIDADE</a>
             </nav>
         </section>
 
+        <!-- Seção do botão de login -->
         <section id="login">
-            <!-- Seção identificada como "login", contendo o botão de login -->
             <button>LOGIN</button>
-            <!-- Botão de login -->
         </section>
-
     </header>
 
+    <!-- Corpo principal da página -->
     <main>
-        <!-- Seção principal da página -->
 
+        <!-- Seção de apresentação com texto e imagem -->
         <section id="apresentacao">
-            <!-- Seção de apresentação da página, com título e conteúdo -->
-
-            <!-- Título principal da seção de apresentação -->
-
             <section id="conteudo">
-                <!-- Seção que agrupa o conteúdo em duas partes: texto e imagem -->
-
                 <section id="texto">
                     <h1>Competências Socioemocionais</h1>
-                    <!-- Seção de texto, contendo parágrafos explicativos -->
                     <p>
                         Competências socioemocionais são um conjunto de habilidades que envolvem a capacidade de um
                         indivíduo de reconhecer, compreender, gerenciar e expressar suas próprias emoções, além de se
                         relacionar de maneira eficaz e construtiva com os outros.
                     </p>
-                    <!-- Primeiro parágrafo de texto exemplo (placeholder) -->
                     <p>
-                        Essas competências englobam aspectos como a autoconsciência, a
-                        empatia, a comunicação, a tomada de decisões responsáveis, a autogestão e a capacidade de
-                        construir e manter relacionamentos saudáveis.
+                        Essas competências englobam aspectos como a autoconsciência, a empatia, a comunicação, a tomada
+                        de decisões responsáveis, a autogestão e a capacidade de construir e manter relacionamentos
+                        saudáveis.
                     </p>
-                    <!-- Segundo parágrafo de texto exemplo (placeholder) -->
                     <p>
                         No ambiente profissional, especialmente na área de tecnologia da informação, as competências
                         socioemocionais são essenciais para o trabalho em equipe, a resolução de problemas, a adaptação
                         a mudanças e a manutenção de um ambiente de trabalho positivo e colaborativo.
                     </p>
-                    <!-- Terceiro parágrafo de texto exemplo (placeholder) -->
                     <p>
                         Elas complementam as competências técnicas e são fundamentais para o sucesso tanto individual
                         quanto coletivo.
                     </p>
-                    <!-- Quarto parágrafo de texto exemplo (placeholder) -->
                 </section>
 
+                <!-- Imagem relacionada ao conteúdo da apresentação -->
                 <section id="imagem">
-                    <!-- Seção para a imagem ao lado do texto -->
                     <img src="apresentacao_conteudo.png" alt="">
-                    <!-- Imagem representativa (substitua com o caminho correto para sua imagem) -->
                 </section>
             </section>
         </section>
 
+        <!-- Seção de cards com diferentes competências socioemocionais -->
         <section class="cards">
             <h2>Competências Socioemocionais na área de TI</h2>
 
             <section class="grupo-cards">
+                <!-- Card de Autogestão -->
                 <section class="card">
                     <img src="card-autogestao.png" alt="">
                     <section class="card-info">
@@ -135,6 +101,7 @@
                     </section>
                 </section>
 
+                <!-- Card de Colaboração -->
                 <section class="card">
                     <img src="card-colaboracao.png" alt="">
                     <section class="card-info">
@@ -150,6 +117,7 @@
                     </section>
                 </section>
 
+                <!-- Card de Resiliência -->
                 <section class="card">
                     <img src="card-resiliencia.png" alt="">
                     <section class="card-info">
@@ -162,10 +130,10 @@
                                 Saiba mais...
                             </button>
                         </section>
-
                     </section>
                 </section>
 
+                <!-- Card de Empatia -->
                 <section class="card">
                     <img src="card-empatia.png" alt="">
                     <section class="card-info">
@@ -181,6 +149,7 @@
                     </section>
                 </section>
 
+                <!-- Card de Comunicação -->
                 <section class="card">
                     <img src="card-comunicacao.png" alt="">
                     <section class="card-info">
@@ -196,6 +165,7 @@
                     </section>
                 </section>
 
+                <!-- Card de Adaptabilidade -->
                 <section class="card">
                     <img src="card-adaptabilidade.png" alt="">
                     <section class="card-info">
@@ -210,20 +180,290 @@
                         </section>
                     </section>
                 </section>
-
             </section>
-
         </section>
+
+        <section id="autogestao" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Autogestão</h2>
+                <h3>O que é</h3>
+                <p>
+                    Autogestão é a capacidade de controlar emoções e comportamentos, gerenciando o tempo de forma
+                    eficiente. Envolve autocontrole, disciplina e organização para atingir objetivos pessoais e
+                    profissionais. Promove autonomia e resiliência, permitindo lidar com desafios de maneira equilibrada
+                    e tomar decisões responsáveis.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A autogestão é importante porque permite que as pessoas controlem suas emoções e comportamentos,
+                    mantenham o foco em metas e tomem decisões responsáveis. Ela promove disciplina, eficiência e
+                    autonomia, fundamentais para o sucesso pessoal e profissional, além de ajudar a lidar com desafios
+                    de forma equilibrada.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Autocontrole</spam>: Capacidade de controlar emoções e impulsos.
+                    </li>
+                    <li>
+                        <spam>Disciplina</spam>: Manutenção do foco e da organização para alcançar objetivos.
+                    </li>
+                    <li>
+                        <spam>Resiliência</spam>: Capacidade de superar desafios e adversidades.
+                    </li>
+                    <li>
+                        <spam>Tomada de decisões</spam>: Responsabilidade e reflexão ao fazer escolhas.
+                    </li>
+                    <li>
+                        <spam>Autonomia</spam>: Capacidade de agir de forma independente e proativa.
+                    </li>
+                </ol>
+                <button id="autogestao-botao-teste">FAÇA O TESTE: Você tem autogestão?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-autogestao.png" alt="">
+            </section>
+        </section>
+
+
+        <section id="colaboracao" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Colaboração</h2>
+                <h3>O que é</h3>
+                <p>
+                    Colaboração é a habilidade de trabalhar em conjunto com outras pessoas para alcançar objetivos
+                    comuns. Envolve comunicação eficaz, cooperação, empatia e disposição para ouvir e integrar
+                    diferentes perspectivas. Essa competência é fundamental para fortalecer relações, solucionar
+                    problemas em equipe e aumentar a eficiência no ambiente profissional.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A colaboração é importante porque permite que indivíduos combinem habilidades e conhecimentos para
+                    alcançar resultados mais eficazes. Ela promove a resolução de problemas, fortalece o trabalho em
+                    equipe e cria um ambiente mais produtivo. Trabalhar colaborativamente também facilita a inovação e o
+                    desenvolvimento de soluções criativas.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Comunicação eficaz</spam>: Troca clara e aberta de ideias e informações.
+                    </li>
+                    <li>
+                        <spam>Cooperação</spam>: Disposição para trabalhar em conjunto em prol de um objetivo comum.
+                    </li>
+                    <li>
+                        <spam>Empatia</spam>: Capacidade de compreender as perspectivas e emoções dos outros.
+                    </li>
+                    <li>
+                        <spam>Flexibilidade</spam>: Adaptabilidade às ideias e contribuições dos demais.
+                    </li>
+                    <li>
+                        <spam>Resolução de conflitos</spam>: Habilidade de lidar com divergências de forma construtiva.
+                    </li>
+                </ol>
+                <button id="colaboracao-botao-teste">FAÇA O TESTE:Você é colaborativo?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-colaboracao.png" alt="">
+            </section>
+        </section>
+
+        <section id="resiliencia" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Resiliência</h2>
+                <h3>O que é</h3>
+                <p>
+                    Resiliência é a capacidade de enfrentar desafios, superar adversidades e se adaptar a mudanças com
+                    perseverança. Pessoas resilientes mantêm o equilíbrio emocional diante de dificuldades e encontram
+                    soluções para seguir em frente. Essa competência é essencial para o desenvolvimento pessoal e
+                    profissional em um ambiente dinâmico.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A resiliência é importante porque permite enfrentar desafios e adversidades sem desistir. Ela ajuda
+                    a manter a estabilidade emocional, a adaptar-se rapidamente a mudanças e a encontrar soluções em
+                    situações difíceis, sendo essencial para o sucesso pessoal e profissional em ambientes de constante
+                    transformação.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Perseverança</spam>: Capacidade de continuar tentando, mesmo diante de obstáculos.
+                    </li>
+                    <li>
+                        <spam>Flexibilidade</spam>: Adaptabilidade frente a mudanças inesperadas.
+                    </li>
+                    <li>
+                        <spam>Autocontrole emocional</spam>: Manutenção do equilíbrio emocional em situações adversas.
+                    </li>
+                    <li>
+                        <spam>Otimismo</spam>: Visão positiva mesmo em momentos de dificuldade.
+                    </li>
+                    <li>
+                        <spam>Capacidade de recuperação</spam>: Rapidez em se recompor após fracassos ou perdas.
+                    </li>
+                </ol>
+                <button id="resiliencia-botao-teste">FAÇA O TESTE: Você é resiliente?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-resiliencia.png" alt="">
+            </section>
+        </section>
+
+
+        <section id="empatia" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Empatia</h2>
+                <h3>O que é</h3>
+                <p>
+                    Empatia é a habilidade de compreender e compartilhar os sentimentos e perspectivas dos outros. Ela
+                    envolve colocar-se no lugar do outro, promovendo conexões mais profundas e respeitosas. Essencial
+                    para relações saudáveis, a empatia facilita a cooperação e reduz conflitos, tanto no ambiente
+                    pessoal quanto profissional.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A empatia é fundamental porque nos permite compreender e compartilhar as emoções dos outros,
+                    promovendo relações mais profundas e respeitosas. Ela facilita a comunicação, reduz conflitos e
+                    fortalece a colaboração, criando um ambiente mais harmonioso e compreensivo tanto no contexto
+                    pessoal quanto profissional.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Compreensão emocional</spam>: Capacidade de entender os sentimentos dos
+                        outros.
+                    </li>
+                    <li>
+                        <spam>Escuta ativa</spam>: Atenção plena ao ouvir o que o outro está dizendo.
+                    </li>
+                    <li>
+                        <spam>Compartilhamento emocional</spam>: Habilidade de refletir sobre as emoções dos
+                        outros.
+                    </li>
+                    <li>
+                        <spam>Resposta compassiva</spam>: Ação de oferecer suporte e assistência baseados na
+                        compreensão.
+                    </li>
+                    <li>
+                        <spam>Consciência cultural</spam>: Sensibilidade às diferenças culturais e contextuais.
+                    </li>
+                </ol>
+                <button id="empatia-botao-teste">FAÇA O TESTE: Você tem empatia?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-empatia.png" alt="">
+            </section>
+        </section>
+
+        <section id="comunicacao" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Comunicação</h2>
+                <h3>O que é</h3>
+                <p>
+                    A comunicação é o processo de troca de informações entre indivíduos, utilizando palavras, gestos e
+                    expressões. Ela é essencial para compartilhar ideias, resolver conflitos e construir
+                    relacionamentos. Uma comunicação eficaz requer clareza, escuta ativa e empatia para garantir
+                    compreensão e colaboração mútua.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A comunicação é crucial porque facilita a troca de informações, fortalece relacionamentos e resolve
+                    conflitos. Ela permite o entendimento mútuo, a colaboração eficiente e a tomada de decisões
+                    informadas, essencial para o sucesso pessoal e profissional em qualquer contexto social ou
+                    organizacional.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Clareza</spam>: A transmissão de informações de forma direta e compreensível.
+                    </li>
+                    <li>
+                        <spam>Escuta Ativa</spam>: A prática de ouvir atentamente e com interesse.
+
+                    </li>
+                    <li>
+                        <spam>Feedback</spam>: A troca de respostas e reações que ajudam a melhorar a mensagem.
+
+                    </li>
+                    <li>
+                        <spam>Empatia</spam>: A habilidade de entender e considerar as emoções do outro.
+
+                    </li>
+                    <li>
+                        <spam>Adequação ao Contexto</spam>: A capacidade de ajustar o estilo e o conteúdo da comunicação
+                        de acordo com o público, situação e objetivo específico, garantindo relevância e eficácia.
+                    </li>
+                </ol>
+                <button id="comunicacao-botao-teste">FAÇA O TESTE: Você tem boa comunicação?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-comunicacao.png" alt="">
+            </section>
+        </section>
+
+        <section id="adaptabilidade" class="competenciasocioemocional">
+            <section class="competencia-texto">
+                <h2>Adaptabilidade</h2>
+                <h3>O que é</h3>
+                <p>
+                    Adaptabilidade é a capacidade de ajustar-se rapidamente a novas condições e desafios. Ela envolve
+                    flexibilidade, resiliência e disposição para aprender e mudar. Ser adaptável permite enfrentar
+                    imprevistos e aproveitar oportunidades, essencial para o sucesso pessoal e profissional em um
+                    ambiente dinâmico e em constante evolução.
+                </p>
+                <h3>Porque é importante</h3>
+                <p>
+                    A adaptabilidade é crucial porque permite lidar eficazmente com mudanças e desafios inesperados.
+                    Facilita a evolução pessoal e profissional, melhora a capacidade de resolução de problemas e promove
+                    a inovação. Em um ambiente dinâmico, ser adaptável é essencial para a sobrevivência e o sucesso a
+                    longo prazo.
+                </p>
+                <h3>Principais características</h3>
+                <ol>
+                    <li>
+                        <spam>Flexibilidade</spam>: Capacidade de ajustar-se rapidamente a novas condições.
+                    </li>
+                    <li>
+                        <spam>Resiliência</spam>: Habilidade de se recuperar e persistir diante de adversidades.
+
+                    </li>
+                    <li>
+                        <spam>Abertura ao Aprendizado</spam>: Disposição para adquirir novas habilidades e
+                        conhecimentos.
+
+                    </li>
+                    <li>
+                        <spam>Proatividade</spam>: Aptidão para antecipar mudanças e agir antes que problemas se
+                        agravem.
+
+                    </li>
+                    <li>
+                        <spam>Autoconhecimento</spam>: Consciência das próprias forças e fraquezas.
+                    </li>
+                </ol>
+                <button id="adaptabilidade-botao-teste">FAÇA O TESTE: Você se adapta bem?</button>
+            </section>
+            <section class="competencia-imagem">
+                <img src="profissional-adaptabilidade.png" alt="">
+            </section>
+        </section>
+
+
 
     </main>
 
+    <!-- Rodapé da página -->
     <footer>
         <h3>Footer</h3>
-        
     </footer>
-    <!-- Rodapé vazio, pronto para adicionar conteúdo futuro -->
+
+    <div id="topo">
+        <a href="#titulo">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
 
 </body>
 
 </html>
-<!-- Finaliza o documento HTML -->
